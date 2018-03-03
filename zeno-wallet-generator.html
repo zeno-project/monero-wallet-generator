@@ -9022,7 +9022,7 @@ function mn_decode(str, wordset_name) {
     var n = wordset.words.length;
     var wlist = str.split(' ');
     var checksum_word = '';
-    if (wlist.length < 12) throw "You've entered too few words, please try again";
+    if (wlist.length < 8) throw "You've entered too few words, please try again";
     if ((wordset.prefix_len === 0 && (wlist.length % 3 !== 0)) ||
         (wordset.prefix_len > 0 && (wlist.length % 3 === 2))) throw "You've entered too few words, please try again";
     if (wordset.prefix_len > 0 && (wlist.length % 3 === 0)) throw "You seem to be missing the last word in your private key, please try again";
@@ -11182,7 +11182,7 @@ function setCoin(index)
   prefix_widget = document.getElementById("prefix_widget");
   if (index == 0) {
     cnUtil = cnUtilGen(zenoConfig);
-    prefix_widget.value = "4";
+    prefix_widget.value = "Zn";
     enable = true
     language = "english"
   }
